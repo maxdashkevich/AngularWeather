@@ -1,0 +1,12 @@
+.weather {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3rem;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.cities {
+    margin-top: 200px;
+}
+

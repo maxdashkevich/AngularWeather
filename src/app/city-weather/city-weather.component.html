@@ -1,0 +1,23 @@
+<form name="myForm">
+    <label>
+      <select class='cities' name="language" (change)="getWeather()" [(ngModel)]="selectedCity" required>
+        <option *ngFor="let city of cities$ | async">
+          {{ city }}
+        </option>
+      </select>
+    </label>
+  </form>
+  <ng-container *ngIf="weather$ | async as weatherData">
+    <div class='weather'>
+        <div>
+            The temperature is {{weatherData.temperature}} °C
+        </div>
+        <div>
+            Humidity: {{weatherData.humidity}} %
+        </div>
+        <div>
+            Wind speed: {{weatherData.wind}} m/s
+        </div>
+    </div>
+  </ng-container>
+  
